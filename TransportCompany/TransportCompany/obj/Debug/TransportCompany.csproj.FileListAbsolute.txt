@@ -5,3 +5,10 @@ C:\Univer\TransportCompany\TransportCompany\obj\Debug\TransportCompany.csprojAss
 C:\Univer\TransportCompany\TransportCompany\obj\Debug\TransportCompany.csproj.CoreCompileInputs.cache
 C:\Univer\TransportCompany\TransportCompany\obj\Debug\TransportCompany.exe
 C:\Univer\TransportCompany\TransportCompany\obj\Debug\TransportCompany.pdb
+C:\Univer\gitHub\EPAM_Task\TransportCompany\TransportCompany\bin\Debug\TransportCompany.exe.config
+C:\Univer\gitHub\EPAM_Task\TransportCompany\TransportCompany\bin\Debug\TransportCompany.exe
+C:\Univer\gitHub\EPAM_Task\TransportCompany\TransportCompany\bin\Debug\TransportCompany.pdb
+C:\Univer\gitHub\EPAM_Task\TransportCompany\TransportCompany\obj\Debug\TransportCompany.csprojAssemblyReference.cache
+C:\Univer\gitHub\EPAM_Task\TransportCompany\TransportCompany\obj\Debug\TransportCompany.csproj.CoreCompileInputs.cache
+C:\Univer\gitHub\EPAM_Task\TransportCompany\TransportCompany\obj\Debug\TransportCompany.exe
+C:\Univer\gitHub\EPAM_Task\TransportCompany\TransportCompany\obj\Debug\TransportCompany.pdb

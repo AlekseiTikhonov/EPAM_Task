@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EFC4EF0B-D2B6-4C88-8C68-A405855205DA}</ProjectGuid>
+    <ProjectGuid>{F0962B08-E6D2-417F-A6FE-16ED57BAFE41}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TransportCompany</RootNamespace>
-    <AssemblyName>TransportCompany</AssemblyName>
+    <RootNamespace>Airplane</RootNamespace>
+    <AssemblyName>Airplane</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,18 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Airplane.cs" />
-    <Compile Include="AirTransport.cs" />
-    <Compile Include="Auto.cs" />
-    <Compile Include="Basic.cs" />
-    <Compile Include="Helicopter.cs" />
-    <Compile Include="LandTransport.cs" />
-    <Compile Include="Liner.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tanker.cs" />
-    <Compile Include="Train.cs" />
-    <Compile Include="Vehicle.cs" />
-    <Compile Include="WaterTransport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -117,12 +117,16 @@ namespace TransportCompany
                 case 1:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №1, лайнеры");
-
+                    Liner liner = new Liner();
+                    liner.SetAllInfo();
+                    Console.WriteLine(liner.Information());
                     break;
                 case 2:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №2, танкеры");
-
+                    Tanker tanker = new Tanker();
+                    tanker.SetAllInfo();
+                    Console.WriteLine(tanker.Information());
                     break;
             }
         }
@@ -133,12 +137,16 @@ namespace TransportCompany
                 case 1:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №1, самолёты");
-
+                    Airplane airplane = new Airplane();
+                    airplane.SetAllInfo();
+                    Console.WriteLine(airplane.Information());
                     break;
                 case 2:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №2, вертолёты");
-
+                    Helicopter helicopter = new Helicopter();
+                    helicopter.SetAllInfo();
+                    Console.WriteLine(helicopter.Information());
                     break;
             }
         }
