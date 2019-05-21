@@ -24,7 +24,7 @@ namespace TransportCompany
             typeLand = "Нет типа";
         }
 
-        public LandTransport(string marka, int speed, int carrying, int numOfStuff, int numOfPassengers, string typeOfVehicle, string typeOfLandVehicle) 
+        public LandTransport(string marka, uint speed, uint carrying, uint numOfStuff, uint numOfPassengers, string typeOfVehicle, string typeOfLandVehicle) 
             : base( marka, speed, carrying, numOfStuff, numOfPassengers, typeOfVehicle)  
         {
             typeLand = typeOfLandVehicle;

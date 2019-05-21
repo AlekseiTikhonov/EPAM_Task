@@ -10,10 +10,10 @@ namespace TransportCompany
     {
         private string mark; //марка
         private string type; // тип техники (наземная, воздушная, водная)
-        private int maxSpeed; // максимальная скорость
-        private int capacity; // грузоподъемность
-        private int stuff; // количество персонала
-        private int passengers; // количество пассажиров
+        private uint maxSpeed; // максимальная скорость
+        private uint capacity; // грузоподъемность
+        private uint stuff; // количество персонала
+        private uint passengers; // количество пассажиров
         
         public void SetMark(string marka)
         { 
@@ -23,24 +23,24 @@ namespace TransportCompany
         {
             type = typeOfVehicle;
         }
-        public void SetMaxSpeed(int speed)
+        public void SetMaxSpeed(uint speed)
         { 
             maxSpeed = speed; 
         }
-        public void SetCapacity(int carrying)
+        public void SetCapacity(uint carrying)
         {
             capacity = carrying;
         }
-        public void SetStuff(int numOfStuff)
+        public void SetStuff(uint numOfStuff)
         {
             stuff = numOfStuff;
         }
-        public void SetPassengers(int numOfPassengers)
+        public void SetPassengers(uint numOfPassengers)
         {
             passengers = numOfPassengers;
         }
 
-        public int GetMaxSpeed()
+        public uint GetMaxSpeed()
         { 
           return maxSpeed; 
         }
@@ -53,15 +53,15 @@ namespace TransportCompany
             return type;
         }
 
-        public int GetCapacity()
+        public uint GetCapacity()
         {
             return capacity;
         }
-        public int GetStuff()
+        public uint GetStuff()
         {
             return stuff;
         }
-        public int GetPassengers()
+        public uint GetPassengers()
         {
             return passengers;
         }
@@ -74,7 +74,7 @@ namespace TransportCompany
             passengers = 0;
             type = "Нет типа";
         }
-        public Vehicle(string marka, int speed, int carrying, int numOfStuff, int numOfPassengers, string typeOfVehicle)
+        public Vehicle(string marka, uint speed, uint carrying, uint numOfStuff, uint numOfPassengers, string typeOfVehicle)
         { //конструктор класса (с параметрами)
             mark = marka;
             type = typeOfVehicle;

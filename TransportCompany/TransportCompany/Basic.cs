@@ -48,15 +48,15 @@ namespace TransportCompany
 
         }
 
-        private static int Choosing (int num)
+        private static uint Choosing (uint num)
         {
             bool check = true;
-            int choice = 0;
+            uint choice = 0;
             while (check)
              {
                 try
                 {
-                    choice = int.Parse(Console.ReadLine());
+                    choice = uint.Parse(Console.ReadLine());
                     if (choice >=1 && choice <= num)
                     {
                         check = false;
@@ -75,7 +75,7 @@ namespace TransportCompany
             return choice;
         }
 
-        private static void ProcessTypeOfVehicle (int choosing)
+        private static void ProcessTypeOfVehicle (uint choosing)
         {
             switch (choosing)
             {
@@ -107,7 +107,7 @@ namespace TransportCompany
         }
       
 
-        private static void ProcessTypeOfLandTransport (int choosing)
+        private static void ProcessTypeOfLandTransport (uint choosing)
         {
             switch (choosing)
             {
@@ -141,7 +141,7 @@ namespace TransportCompany
             OneMoreOrMenu(auto.ElementAt(auto.Count - 1).GetTypeLandVehicle());
         }
 
-        private static void ProcessTypeOfWaterTransport(int choosing)
+        private static void ProcessTypeOfWaterTransport(uint choosing)
         {
             switch (choosing)
             {
@@ -175,7 +175,7 @@ namespace TransportCompany
             OneMoreOrMenu(tanker.ElementAt(tanker.Count - 1).GetTypeWaterVehicle());
         }
         
-        private static void ProcessTypeOfAirTransport(int choosing)
+        private static void ProcessTypeOfAirTransport(uint choosing)
         {
             switch (choosing)
             {

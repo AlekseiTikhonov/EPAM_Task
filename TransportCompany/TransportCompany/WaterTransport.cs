@@ -24,7 +24,7 @@ namespace TransportCompany
             typeWater = "Нет типа";
         }
 
-        public WaterTransport(string marka, int speed, int carrying, int numOfStuff, int numOfPassengers, string typeOfVehicle, string typeOfWaterVehicle)
+        public WaterTransport(string marka, uint speed, uint carrying, uint numOfStuff, uint numOfPassengers, string typeOfVehicle, string typeOfWaterVehicle)
             : base(marka, speed, carrying, numOfStuff, numOfPassengers, typeOfVehicle)
         {
             typeWater = typeOfWaterVehicle;

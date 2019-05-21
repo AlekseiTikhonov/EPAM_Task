@@ -24,7 +24,7 @@ namespace TransportCompany
             typeAir = "Нет типа";
         }
 
-        public AirTransport(string marka, int speed, int carrying, int numOfStuff, int numOfPassengers, string typeOfVehicle, string typeOfAirVehicle)
+        public AirTransport(string marka, uint speed, uint carrying, uint numOfStuff, uint numOfPassengers, string typeOfVehicle, string typeOfAirVehicle)
             : base(marka, speed, carrying, numOfStuff, numOfPassengers, typeOfVehicle)
         {
             typeAir = typeOfAirVehicle;

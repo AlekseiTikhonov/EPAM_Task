@@ -8,14 +8,14 @@ namespace TransportCompany
 {
     class Train : LandTransport
     {
-        private int coaches;
+        private uint coaches;
 
-        public void SetCoaches(int numOfCoaches)
+        public void SetCoaches(uint numOfCoaches)
         {
             coaches = numOfCoaches;
         }
 
-        public int GetCoaches()
+        public uint GetCoaches()
         {
             return coaches;
         }
@@ -25,7 +25,7 @@ namespace TransportCompany
             coaches = 0;
         }
 
-        public Train(string marka, int speed, int carrying, int numOfStuff, int numOfPassengers, string typeOfVehicle, string typeOfLandVehicle, int numOfCoaches)
+        public Train(string marka, uint speed, uint carrying, uint numOfStuff, uint numOfPassengers, string typeOfVehicle, string typeOfLandVehicle, uint numOfCoaches)
             : base(marka, speed, carrying, numOfStuff, numOfPassengers, typeOfVehicle, typeOfLandVehicle)
         {
             coaches = numOfCoaches;
@@ -42,7 +42,7 @@ namespace TransportCompany
                 try
                 {
                     Console.Write("Введите количество вагонов: ");
-                    coaches = int.Parse(Console.ReadLine());
+                    coaches = uint.Parse(Console.ReadLine());
                     SetCoaches(coaches);
                     check = false;
                 }
@@ -57,7 +57,7 @@ namespace TransportCompany
                 try
                 {
                     Console.Write("Введите максимальную скорость: ");
-                    int speed = int.Parse(Console.ReadLine());
+                    uint speed = uint.Parse(Console.ReadLine());
                     SetMaxSpeed(speed);
                     check = false;
                 }
@@ -72,7 +72,7 @@ namespace TransportCompany
                 try
                 {
                     Console.Write("Введите грузоподъемность (число) тонн: ");
-                    int carrying = int.Parse(Console.ReadLine());
+                    uint carrying = uint.Parse(Console.ReadLine());
                     SetCapacity(carrying);
                     check = false;
                 }
@@ -87,7 +87,7 @@ namespace TransportCompany
                 try
                 {
                     Console.Write("Введите количество персонала, необходимого для эксплуатации: ");
-                    int numOfStuff = int.Parse(Console.ReadLine());
+                    uint numOfStuff = uint.Parse(Console.ReadLine());
                     SetStuff(numOfStuff);
                     check = false;
                 }
@@ -102,7 +102,7 @@ namespace TransportCompany
                 try
                 {
                     Console.Write("Введите максимальное количество пассажиров: ");
-                    int numOfPassengers = int.Parse(Console.ReadLine());
+                    uint numOfPassengers = uint.Parse(Console.ReadLine());
                     SetPassengers(numOfPassengers);
                     check = false;
                 }
