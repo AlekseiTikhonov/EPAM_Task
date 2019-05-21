@@ -39,8 +39,10 @@ namespace TransportCompany
                     break;
                 case 2:
                     Console.WriteLine("Вы выбрали пункт №2");
-
-
+                    ShowAllTransport();
+                    Console.WriteLine("Нажмите Enter, чтобы выйти в главное меню");
+                    Console.ReadLine();
+                    ShowMainMenu();
                     break;
             }
 
@@ -228,7 +230,39 @@ namespace TransportCompany
 
         private static void ShowAllTransport ()
         {
-            
+            Console.Clear();
+
+            if (auto.Count == 0 && airplane.Count == 0 && train.Count == 0 && tanker.Count == 0 && liner.Count == 0 && helicopter.Count == 0)
+                Console.WriteLine("У нас пока нету добавленных транспортных средств");
+            else
+            {
+                Console.WriteLine("Вот наши транспортные средства:");
+                foreach(Auto a in auto)
+                {
+                    Console.WriteLine(a.Information()); 
+                }
+                foreach (Train a in train)
+                {
+                    Console.WriteLine(a.Information());
+                }
+                foreach (Liner a in liner)
+                {
+                    Console.WriteLine(a.Information());
+                }
+                foreach (Tanker a in tanker)
+                {
+                    Console.WriteLine(a.Information());
+                }
+                foreach (Airplane a in airplane)
+                {
+                    Console.WriteLine(a.Information());
+                }
+                foreach (Helicopter a in helicopter)
+                {
+                    Console.WriteLine(a.Information());
+                }
+            }
+
         }
     }
 }
