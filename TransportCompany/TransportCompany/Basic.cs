@@ -8,8 +8,21 @@ namespace TransportCompany
 {
     class Basic
     {
+        static List<Train> train = new List<Train>();
+        static List<Auto> auto = new List<Auto>();
+        static List<Liner> liner = new List<Liner>();
+        static List<Tanker> tanker = new List<Tanker>();
+        static List<Airplane> airplane = new List<Airplane>();
+        static List<Helicopter> helicopter = new List<Helicopter>();
+
         static void Main(string[] args)
         {
+            ShowMainMenu();
+            Console.ReadLine();
+        }
+        private static void ShowMainMenu()
+        {
+            Console.Clear();
             Console.WriteLine("Выберите, что вы хотите сделать (1,2)");
             Console.WriteLine("1 - Добавить транспортное средство");
             Console.WriteLine("2 - Просмотреть транспортные средства");
@@ -26,10 +39,11 @@ namespace TransportCompany
                     break;
                 case 2:
                     Console.WriteLine("Вы выбрали пункт №2");
+
+
                     break;
             }
-            Console.ReadLine();
-            
+
         }
 
         private static int Choosing (int num)
@@ -89,6 +103,7 @@ namespace TransportCompany
                     break;
             }
         }
+      
 
         private static void ProcessTypeOfLandTransport (int choosing)
         {
@@ -97,19 +112,33 @@ namespace TransportCompany
                 case 1:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №1, поезда");
-                    Train train = new Train();
-                    train.SetAllInfo();
-                    Console.WriteLine(train.Information());
+                    AddTrain();
                     break;
                 case 2:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №2, автомобили");
-                    Auto auto = new Auto();
-                    auto.SetAllInfo();
-                    Console.WriteLine(auto.Information());
+                    AddAuto();
                     break;
             }
         }
+
+
+        private static void AddTrain()
+        {
+            train.Add(new Train());
+            train.ElementAt(train.Count - 1).SetAllInfo();
+            Console.WriteLine(train.ElementAt(train.Count - 1).Information());
+            OneMoreOrMenu(train.ElementAt(train.Count - 1).GetTypeLandVehicle());
+        }
+
+        private static void AddAuto()
+        {
+            auto.Add(new Auto());
+            auto.ElementAt(auto.Count - 1).SetAllInfo();
+            Console.WriteLine(auto.ElementAt(auto.Count - 1).Information());
+            OneMoreOrMenu(auto.ElementAt(auto.Count - 1).GetTypeLandVehicle());
+        }
+
         private static void ProcessTypeOfWaterTransport(int choosing)
         {
             switch (choosing)
@@ -117,19 +146,33 @@ namespace TransportCompany
                 case 1:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №1, лайнеры");
-                    Liner liner = new Liner();
-                    liner.SetAllInfo();
-                    Console.WriteLine(liner.Information());
+                    AddLiner();
                     break;
                 case 2:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №2, танкеры");
-                    Tanker tanker = new Tanker();
-                    tanker.SetAllInfo();
-                    Console.WriteLine(tanker.Information());
+                    AddTanker();
                     break;
             }
         }
+
+
+        private static void AddLiner()
+        {
+            liner.Add(new Liner());
+            liner.ElementAt(liner.Count - 1).SetAllInfo();
+            Console.WriteLine(liner.ElementAt(liner.Count - 1).Information());
+            OneMoreOrMenu(liner.ElementAt(liner.Count - 1).GetTypeWaterVehicle());
+        }
+
+        private static void AddTanker()
+        {
+            tanker.Add(new Tanker());
+            tanker.ElementAt(tanker.Count - 1).SetAllInfo();
+            Console.WriteLine(tanker.ElementAt(tanker.Count - 1).Information());
+            OneMoreOrMenu(tanker.ElementAt(tanker.Count - 1).GetTypeWaterVehicle());
+        }
+        
         private static void ProcessTypeOfAirTransport(int choosing)
         {
             switch (choosing)
@@ -137,18 +180,55 @@ namespace TransportCompany
                 case 1:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №1, самолёты");
-                    Airplane airplane = new Airplane();
-                    airplane.SetAllInfo();
-                    Console.WriteLine(airplane.Information());
+                    AddAirplane();
                     break;
                 case 2:
                     Console.Clear();
                     Console.WriteLine("Вы выбрали пункт №2, вертолёты");
-                    Helicopter helicopter = new Helicopter();
-                    helicopter.SetAllInfo();
-                    Console.WriteLine(helicopter.Information());
+                    AddHelicopter();
                     break;
             }
+        }
+        private static void AddAirplane ()
+        {
+            airplane.Add(new Airplane());
+            airplane.ElementAt(airplane.Count - 1).SetAllInfo();
+            Console.WriteLine(airplane.ElementAt(airplane.Count - 1).Information());
+            OneMoreOrMenu(airplane.ElementAt(airplane.Count - 1).GetTypeAirVehicle());
+
+        }
+        private static void AddHelicopter()
+        {
+            helicopter.Add(new Helicopter());
+            helicopter.ElementAt(helicopter.Count - 1).SetAllInfo();
+            Console.WriteLine(helicopter.ElementAt(helicopter.Count - 1).Information());
+            OneMoreOrMenu(helicopter.ElementAt(helicopter.Count - 1).GetTypeAirVehicle());
+        }
+
+        private static void OneMoreOrMenu(string type)
+        {
+            Console.WriteLine("Хотите-ли вы добавить ещё один объет в класс {0}?",type);
+            Console.WriteLine("1 - Да");
+            Console.WriteLine("2 - Вернуться в главное меню");
+            switch (Choosing(2))
+            {
+                case 1:
+                    if (type.Equals("Автомобили")) AddAuto();
+                    else if (type.Equals("Поезда")) AddTrain();
+                    else if (type.Equals("Лайнеры")) AddLiner();
+                    else if (type.Equals("Танкеры")) AddTanker();
+                    else if (type.Equals("Самолёты")) AddAirplane();
+                    else if (type.Equals("Вертолёты")) AddHelicopter();
+                    break;
+                case 2:
+                    ShowMainMenu();
+                    break;
+            }
+        }
+
+        private static void ShowAllTransport ()
+        {
+            
         }
     }
 }
